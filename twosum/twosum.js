@@ -6,7 +6,6 @@ function twosum(target, arr) {
   // number to find object
   let ntfObj = {};
   const len = arr.length;
-
   // loop over the array
   for (let i = 0; i < len; i++) {
     // number to find in the object
