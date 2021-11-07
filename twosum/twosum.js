@@ -1,18 +1,23 @@
-let arr1 = [3, 6, 4, 6];
+let arr1 = [1, 5, 7, 2, 3];
 
 //solution using an object/hashmap
 
 function twosum(target, arr) {
+  // number to find object
   let ntfObj = {};
+  const len = arr.length;
 
   // loop over the array
-  for (i = 0; i < arr.length; i++) {
-    // number to find
-    let ntf = ntfObj[arr[i]];
-    if (ntf > = 0){
-        return 
+  for (let i = 0; i < len; i++) {
+    // number to find in the object
+    let ntf = target - arr[i];
+    //if the object already has an existing complementary value
+    if (ntfObj[arr[i]] >= 0) {
+      return [ntfObj[arr[i]], i];
+    } else {
+      ntfObj[ntf] = i;
     }
-    console.log(ntf);
+    //else push the
   }
 }
 
@@ -35,4 +40,4 @@ function twosum(target, arr) {
 //   }
 // }
 
-twosum(8, arr1);
+console.log(twosum(8, arr1));
